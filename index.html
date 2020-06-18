@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kiemtra = " Hiển thị những số nguyên tố nhỏ hơn 10000 : ";
+
+    function isPrime(value) {
+        if (value < 2)
+            return false;
+        for (let i = 2; i <= Math.sqrt(value); i++) {
+            if ( value % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    for (let i = 1; i < 10000; i++) {
+        if (isPrime(i)) {
+            kiemtra += i + "&nbsp";
+        }
+    }
+    document.write(kiemtra);
+
+
+
+   
+  
+
+</script>
+</body>
+</html>
